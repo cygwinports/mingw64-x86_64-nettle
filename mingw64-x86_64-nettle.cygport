@@ -1,0 +1,23 @@
+CROSS_HOST="x86_64-w64-mingw32"
+inherit cross
+
+NAME="mingw64-x86_64-nettle"
+VERSION=2.5
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Low-level cryptographic library for Win64 toolchain"
+DESCRIPTION="This package does NOT contain cygwin binaries.
+Instead, it contains msvcrt-linked binaries.  It is for use with the
+mingw64-x86_64-gcc cross compiler, and installs into the
+/usr/x86_64-w64-mingw32/sys-root/mingw/{lib,include} directories."
+HOMEPAGE="http://www.lysator.liu.se/~nisse/nettle/"
+SRC_URI="ftp://ftp.lysator.liu.se/pub/security/lsh/nettle-${VERSION}.tar.gz"
+SRC_DIR="nettle-${VERSION}"
+
+src_install() {
+	cd ${B}
+	cyginstall
+
+	rm -f ${D}${CROSS_BINDIR}/*.exe
+	rm -fr ${D}${CROSS_DATADIR}/info/
+}
