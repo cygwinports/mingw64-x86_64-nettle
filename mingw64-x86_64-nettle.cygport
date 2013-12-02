@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
 NAME="mingw64-x86_64-nettle"
-VERSION=2.6
+VERSION=2.7
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Low-level cryptographic library for Win64 toolchain"
