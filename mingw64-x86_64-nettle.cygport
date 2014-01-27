@@ -2,7 +2,7 @@ CROSS_HOST="x86_64-w64-mingw32"
 inherit cross
 
 NAME="mingw64-x86_64-nettle"
-VERSION=2.7
+VERSION=2.7.1
 RELEASE=1
 CATEGORY="Devel"
 SUMMARY="Low-level cryptographic library for Win64 toolchain"
@@ -11,7 +11,7 @@ Instead, it contains msvcrt-linked binaries.  It is for use with the
 mingw64-x86_64-gcc cross compiler, and installs into the
 /usr/x86_64-w64-mingw32/sys-root/mingw/{lib,include} directories."
 HOMEPAGE="http://www.lysator.liu.se/~nisse/nettle/"
-SRC_URI="ftp://ftp.lysator.liu.se/pub/security/lsh/nettle-${VERSION}.tar.gz"
+SRC_URI="http://www.lysator.liu.se/~nisse/archive/nettle-${VERSION}.tar.gz"
 SRC_DIR="nettle-${VERSION}"
 PATCH_URI="2.6-soname.patch"
 
